@@ -1,4 +1,5 @@
 # Environment Dependencies
+import os
 from dotenv import load_dotenv
 
 # Memory and Checkpoint Dependencies
@@ -26,7 +27,7 @@ from agent.multiagent_helpers import invoice_tools, music_tools, get_customer_id
 
 
 load_dotenv(dotenv_path="../.env", override=True)
-model = ChatOpenAI(model="o3-mini")
+model = ChatOpenAI(model="o3-mini", openai_api_base=os.getenv("OPENAI_BASE_URL"))
 
 
 # Initializing long term memory store 
