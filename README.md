@@ -7,22 +7,39 @@ This repository contains comprehensive tutorials and examples for implementing e
 
 ### Clone the LangSmith Workshops repo
 ```
-git clone https://github.com/xuro-langchain/langsmith-in-code
+git clone https://github.com/achan-circle/langsmith-in-code
+```
+
+### Install pip and python - skip if already installed
+```
+# Install brew
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install python
+$ brew install python
 ```
 
 ### Create an environment and install dependencies  
 ```
 # Ensure you have a recent version of pip and python installed
 $ cd langsmith-in-code
+$ pip install uv
 $ uv sync
+$ uv venv
 ```
 
 Create a .env file in the root repo folder using ```.env.example``` as an example.
+### Create .env file
+```
+$ cp .env.example .env
+open .env
+```
+###
+1. fill in `LANGSMITH_ENDPOINT`, `LANGSMITH_API_KEY`, `OPENAI_BASE_URL`, and `OPENAI_API_KEY` as instructed.
 
 ## Running notebooks
 Make sure the following command works and opens the relevant notebooks
 ```
-$ jupyter notebook
+$ uv run jupyter notebook
 ```
 
 The notebooks you should use are in the notebooks folder, which cover evaluations and tracing.

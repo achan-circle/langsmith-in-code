@@ -1,3 +1,4 @@
+import os
 import pytest
 import uuid
 import json
@@ -15,7 +16,7 @@ from agent.multiagent import multiagent
 
 client = Client()
 
-model = ChatOpenAI(model="o3-mini")
+model = ChatOpenAI(model="o3-mini", openai_api_base=os.getenv("OPENAI_BASE_URL"))
 
 # Using Open Eval pre-built 
 correctness_evaluator = create_async_llm_as_judge(
