@@ -11,6 +11,8 @@ git clone https://github.com/achan-circle/langsmith-in-code
 ```
 
 ### Install pip and python - skip if already installed
+
+Install through Kandji by searching for "Python 3", or use brew
 ```
 # Install brew
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
